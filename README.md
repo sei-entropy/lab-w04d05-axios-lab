@@ -105,8 +105,8 @@ To use, include the library in your `index.html` **ABOVE** your custom script fi
 
 ```js
 axios({
-	method: 'GET',
-	url: 'https://randoom_dev.api.com/random_api_endpoint_url'
+    method: 'GET',
+    url: 'https://randoom_dev.api.com/random_api_endpoint_url'
   })
   .then(function (response) {
     // handle success
