@@ -238,6 +238,10 @@ Your app must have at minimum:
 1. A form to accept user input for whatever API you choose
 2. Incorporate at least 2 endpoints from your API
 
+#### FOR EXAMPLE
+
+In the Dog API App, we could click a button to get a random dog image **OR** we could type in a specific breed in an input box and make a request for a specific random dog pic. This required the use of **two** endpoints.
+
 
 ###  Advanced features
 
