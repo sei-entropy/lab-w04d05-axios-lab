@@ -8,7 +8,7 @@ Yesterday we built apps that consumed 3rd party APIs (Unsplash, Open Weather, Qu
 
 ## Axios/API/JSON Review
 
-###What is an API?
+### What is an API?
 
 > Basically, an API is a service that provides raw data for public use.
 
