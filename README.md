@@ -80,9 +80,7 @@ While the majority of APIs are free to use, many of them require an API "key" th
 
 ### What is Axios?
 
-[Axios](https://github.com/axios/axios) is a Promise based HTTP client for the browser and node.js
-
-To use, include the library in your `index.html` **ABOVE** your custom script file!
+[Axios](https://github.com/axios/axios) is a Promise based HTTP client for the browser and node.js. We use Axios to request data from 3rd party APIs (or our own seperate API server). To use, include the library in your `index.html` **ABOVE** your custom script file!
 
 ```html
 <body>
