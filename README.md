@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Yesterday we built apps that consumed 3rd party APIs (Unsplash, Open Weather, Quotes). Your mini-project prompt is an open-ended one: **work together as a group**, make something cool using a 3rd party API of your choosing! You should each make individual apps, but **work together as a group**.
+Yesterday we built apps that consumed 3rd party APIs (Unsplash, Open Weather, Quotes). Your mini-project prompt is an open-ended one: **you can work together as a group**, make something cool using a 3rd party API of your choosing! You should each make individual apps.
 
 <br>
 
@@ -202,7 +202,6 @@ Take 25 minutes to explore the documentation for an API. In particular, think ab
 | **[Giphy](https://github.com/Giphy/GiphyAPI)** | http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC |
 | **[OMDB API](http://www.omdbapi.com/)** | http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=1 |
 | **[StarWars](http://swapi.co/)** | http://swapi.co/api/people/3 |
-| **[Stocks](http://dev.markitondemand.com/MODApis/)** | http://dev.markitondemand.com/Api/Quote/xml?symbol=AAPL |
 | **[Dog API](https://dog.ceo/dog-api/)** | http://itsthisforthat.com/api.php?json |
 | **[Game of Thrones API](https://anapioficeandfire.com/)** | http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC |
 | **[Pokemon API](https://pokeapi.co/)** | http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=1 |
