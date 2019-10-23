@@ -185,7 +185,7 @@ A promise method for when the Axios call fails...
 
 Postman allows us to test out API endpoints **before** we start bulding the front-end of our application in React.
 
-We can **only** use the browser for `GET` requests. If we want to test out **any** other type of HTTP request like `POST`, `PUT/PATCH`, or `DELETE` then we must use a tool like Postman.
+We can **only** use the browser for `GET` requests. If we want to test out **any** other type of HTTP request like `POST` then we must use a tool like Postman.
 
 It is **much easier** to test out and **confirm** these HTTP requests with Postman **first** instead of building an entire front-end with views, forms, buttons, links, etc. **Way too many points of failure!**
 
