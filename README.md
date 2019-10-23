@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Yesterday we built apps that consumed 3rd party APIs (Unsplash, Open Weather, Quotes). Your mini-project prompt is an open-ended one: **you can work together as a group**, make something cool using a 3rd party API of your choosing! You should each make individual apps.
+Yesterday we built apps that consumed 3rd party APIs (Unsplash, Open Weather, Quotes). Your mini-project prompt is an open-ended one: **you can work together as a group**, make something cool using a 3rd party API of your choosing! **You should each make individual apps**.
 
 <br>
 
