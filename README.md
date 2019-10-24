@@ -194,7 +194,7 @@ It is **much easier** to test out and **confirm** these HTTP requests with Postm
 
 ## API Exploration
 
-Take 25 minutes to explore the documentation for an API. In particular, think about what you see in the URL and the API response itself.
+Take 25 minutes to explore the documentation for an API. In particular, think about what you see in the URL and the API response itself. This website has a lot of public API's [public-apis](https://github.com/public-apis/public-apis)
 
 | API | Sample URL |
 |-----|------------|
