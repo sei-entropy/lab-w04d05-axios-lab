@@ -22,9 +22,9 @@ APIs publish data for public use. As third-party software developers, we can acc
 <details>
   <summary><strong>Q: Why do we care?</strong></summary>
 
-  > Why recreate data when we don't have to? Think about past projects or ideas that would be easier if you could pull in data already gathered elsewhere.
+> Why recreate data when we don't have to? Think about past projects or ideas that would be easier if you could pull in data already gathered elsewhere.
 
-  > APIs can provide us with data that would we would otherwise not be able to create ourselves.
+> APIs can provide us with data that would we would otherwise not be able to create ourselves.
 
 </details>
 
@@ -34,7 +34,7 @@ As we move into building single page applications, now is the perfect time to st
 
 ### Why Just Data?
 
-Sometimes that's all we need. All this information, from all these browsers and all these servers, has to travel through the network. That's almost certainly the slowest part of the request cycle. We want to minimize the bits. There are times when we just need the data. For those times, we want a concise format. 
+Sometimes that's all we need. All this information, from all these browsers and all these servers, has to travel through the network. That's almost certainly the slowest part of the request cycle. We want to minimize the bits. There are times when we just need the data. For those times, we want a concise format.
 
 <br>
 
@@ -45,11 +45,12 @@ Sometimes that's all we need. All this information, from all these browsers and 
 ```json
 {
   "users": [
-    {"name": "Bob", "id": 23},
-    {"name": "Tim", "id": 72}
+    { "name": "Bob", "id": 23 },
+    { "name": "Tim", "id": 72 }
   ]
 }
 ```
+
 > Remember, JSON is a serialized format. While it may look like an object, it needs to be parsed so we can interact with it as a true Javascript object.
 
 <br>
@@ -70,14 +71,13 @@ While the majority of APIs are free to use, many of them require an API "key" th
 
 **Try hitting the [Giphy](https://api.giphy.com/) API...**
 
-* No key: [http://api.giphy.com/v1/gifs/search?q=funny+cat](http://api.giphy.com/v1/gifs/search?q=funny+cat)
+- No key: [http://api.giphy.com/v1/gifs/search?q=funny+cat](http://api.giphy.com/v1/gifs/search?q=funny+cat)
 
-* With key: [http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC](http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC)
+- With key: [http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC](http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC)
 
 **It is very important that you not push your API keys to a public Github repo.**
 
 > This is especially true when working with [Amazon Web Services (AWS)](https://aws.amazon.com/). Here's an example of a [stolen key horror story](https://wptavern.com/ryan-hellyers-aws-nightmare-leaked-access-keys-result-in-a-6000-bill-overnight).
-> 
 
 <br>
 
@@ -87,14 +87,11 @@ While the majority of APIs are free to use, many of them require an API "key" th
 
 ```html
 <body>
+  ...
 
-	...
-	
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script src="<YOUR-SCRIPT-FILE.js>"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="<YOUR-SCRIPT-FILE.js>"></script>
 </body>
-
-
 ```
 
 <br>
@@ -103,34 +100,32 @@ While the majority of APIs are free to use, many of them require an API "key" th
 
 [READ THE DOCS](https://github.com/axios/axios)
 
-
 ```js
 axios({
-    method: 'GET',
-    url: 'https://randoom_dev.api.com/random_api_endpoint_url'
-  })
-  .then(function (response) {
+  method: 'GET',
+  url: 'https://randoom_dev.api.com/random_api_endpoint_url'
+})
+  .then(function(response) {
     // handle success
     console.log(response);
   })
-  .catch(function (error) {
+  .catch(function(error) {
     // handle error
     console.log(error);
-  })
+  });
 ```
 
 <br>
 
 ### What are Promises?
 
-Now we need to tell our AJAX method what to do next. We can do this by doing something with the return value, which comes in the form of a **promise**. 
+Now we need to tell our AJAX method what to do next. We can do this by doing something with the return value, which comes in the form of a **promise**.
 
 You can think of them as an IOU the the asynchronous nature of Javascript. It's like when you order a pizza. You place your order and are given receipt as an IOU until they prepare your order. In the meantime, you can check your phone, grab a drink, go wash your hands, etc. When your food is ready and delivered, the promise is fulfilled.
 
 What other types of async operations can you think of in real life?
 
 We can use **promise methods** to tell the `axios()` request what to do if the request is successful or not. In this case, we are going to add two...
-
 
 #### `.then`
 
@@ -146,7 +141,7 @@ A promise method for when the Axios call is successful...
 <details>
   <summary><strong>Q: What are we passing into the `.then` promise method? Does this remind you of anything we've done previously in class?</strong></summary>
 
-  > `.then` requires a callback that determines what we do after a successful AJAX call.
+> `.then` requires a callback that determines what we do after a successful AJAX call.
 
 </details>
 
@@ -167,18 +162,18 @@ A promise method for when the Axios call fails...
 
 ### What are CORS erros?
 
-* [CORS Explained](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors)
-* [Wikipedia](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+- [CORS Explained](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors)
+- [Wikipedia](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 
 <br>
 
 ### How Do I avoid CORS errors?
 
-* [3 Ways to Fix Cors Errors](https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9)
+- [3 Ways to Fix Cors Errors](https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9)
 
-* You may need to add [this chrome extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en) to bypass CORS errors.  Be sure to turn it off once you are done working on the lab.
+- You may need to add [this chrome extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en) to bypass CORS errors. Be sure to turn it off once you are done working on the lab.
 
-* Append `https://cors-anywhere.herokuapp.com/` to the front of your api endpoint. For example: `https://cors-anywhere.herokuapp.com/https://dog.ceo.api.com/random/images`
+- Append `https://cors-anywhere.herokuapp.com/` to the front of your api endpoint. For example: `https://cors-anywhere.herokuapp.com/https://dog.ceo.api.com/random/images`
 
 <br>
 
@@ -194,44 +189,42 @@ It is **much easier** to test out and **confirm** these HTTP requests with Postm
 
 <br>
 
-
 ## API Exploration
 
 Take 25 minutes to explore the documentation for an API. In particular, think about what you see in the URL and the API response itself. This website has a lot of public API's [public-apis](https://github.com/public-apis/public-apis)
 
-| API | Sample URL |
-|-----|------------|
-| **[This for That](http://itsthisforthat.com/)** | http://itsthisforthat.com/api.php?json |
-| **[Giphy](https://github.com/Giphy/GiphyAPI)** | http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC |
-| **[OMDB API](http://www.omdbapi.com/)** | http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=1 |
-| **[StarWars](http://swapi.co/)** | http://swapi.co/api/people/3 |
-| **[Dog API](https://dog.ceo/dog-api/)** | http://itsthisforthat.com/api.php?json |
-| **[Game of Thrones API](https://anapioficeandfire.com/)** | http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC |
-| **[Pokemon API](https://pokeapi.co/)** | http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=1 |
-| **[Weather Underground](http://www.wunderground.com/weather/api)** | http://swapi.co/api/people/3 |
-| **[TV Maze](http://www.tvmaze.com/api)** | http://dev.markitondemand.com/Api/Quote/xml?symbol=AAPL |
-| **[Programmable Web API Directory](http://www.programmableweb.com/apis/directory)** | http://swapi.co/api/people/3 |
-| **[Public APIs Directory](https://github.com/toddmotto/public-apis)** | http://dev.markitondemand.com/Api/Quote/xml?symbol=AAPL |
+| API                                                                                 | Sample URL                                                            |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| **[This for That](http://itsthisforthat.com/)**                                     | http://itsthisforthat.com/api.php?json                                |
+| **[Giphy](https://github.com/Giphy/GiphyAPI)**                                      | http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC |
+| **[OMDB API](http://www.omdbapi.com/)**                                             | http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=1                |
+| **[StarWars](http://swapi.co/)**                                                    | http://swapi.co/api/people/3                                          |
+| **[Dog API](https://dog.ceo/dog-api/)**                                             | http://itsthisforthat.com/api.php?json                                |
+| **[Game of Thrones API](https://anapioficeandfire.com/)**                           | http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC |
+| **[Pokemon API](https://pokeapi.co/)**                                              | http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=1                |
+| **[Weather Underground](http://www.wunderground.com/weather/api)**                  | http://swapi.co/api/people/3                                          |
+| **[TV Maze](http://www.tvmaze.com/api)**                                            | http://dev.markitondemand.com/Api/Quote/xml?symbol=AAPL               |
+| **[Programmable Web API Directory](http://www.programmableweb.com/apis/directory)** | http://swapi.co/api/people/3                                          |
+| **[Public APIs Directory](https://github.com/toddmotto/public-apis)**               | http://dev.markitondemand.com/Api/Quote/xml?symbol=AAPL               |
 
 There's an API for pretty much everything. You can search for more at [Mashape](https://www.mashape.com/explore) or [check out these public APIs](https://github.com/toddmotto/public-apis)
 
-**If you find yourself spending more than 25 minutes just getting the API to talk back to you, you're spending too much time.** 
+**If you find yourself spending more than 25 minutes just getting the API to talk back to you, you're spending too much time.**
 
 <br>
 
 ## Not sure where to start? Here is a suggested workflow...
 
 1. Locally, `mkdir` and `touch` html, js, and css files.
-1. **Set up your HTML and CSS.** Figure out what you want your app to look like.  Be sure to include Axios and link up your files.
-3. **Create your Axios call.** Just make sure it's working -- don't worry about handling the response yet.
-4. **Extract information from your response.** How do you go about accessing it?
-5. **Handle API Response.** What are you going to do with the API response? How will you render it in your HTML/CSS?
-6. **Axios error handling.** What will your program do when your API call doesn't work?
-  
+1. **Set up your HTML and CSS.** Figure out what you want your app to look like. Be sure to include Axios and link up your files.
+1. **Create your Axios call.** Just make sure it's working -- don't worry about handling the response yet.
+1. **Extract information from your response.** How do you go about accessing it?
+1. **Handle API Response.** What are you going to do with the API response? How will you render it in your HTML/CSS?
+1. **Axios error handling.** What will your program do when your API call doesn't work?
+
 ##### Make frequent commits!
 
 <br>
-
 
 ## MVP - Minimum Viable Product
 
@@ -244,10 +237,9 @@ Your app must have at minimum:
 
 In the Dog API App, we could click a button to get a random dog image **OR** we could type in a specific breed in an input box and make a request for a specific random dog pic. This required the use of **two** endpoints.
 
+### Advanced features
 
-###  Advanced features
-
-Going above and beyond the basic implementation is desirable, should you have the time.  Feel free to enhance your project with any of the following features:
+Going above and beyond the basic implementation is desirable, should you have the time. Feel free to enhance your project with any of the following features:
 
 3. Add buttons that a user can click to get the specific information he/she wants (e.g. - 5 day, today's weather, a map, etc)
 4. Add a "loading" animation while the data is gathered from the API
@@ -258,16 +250,16 @@ Going above and beyond the basic implementation is desirable, should you have th
 
 <br>
 
-
 ## Suggested Ways to Get Started
-* **Wireframe** Make a drawing of what your app will look like.
 
-* **Break the project down into different components** (data, presentation, views, style, DOM manipulation) and brainstorm each component individually.
+- **Wireframe** Make a drawing of what your app will look like.
 
-* **Use your Development Tools** (console.log, inspector, alert statements, etc) to debug and solve problems
+- **Break the project down into different components** (data, presentation, views, style, DOM manipulation) and brainstorm each component individually.
 
-* **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
+- **Use your Development Tools** (console.log, inspector, alert statements, etc) to debug and solve problems
 
-* **Consult documentation resources** (MDN, jQuery, etc.) at home to better understand what you’ll be getting into.
+- **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
 
-* **Don’t be afraid to write code that you know you will have to remove later.** Create temporary elements (buttons, links, etc) that trigger events if real data is not available. For example, if you’re trying to figure out how to change some text when the game is over but you haven’t solved the win/lose game logic, you can create a button to simulate that until then.
+- **Consult documentation resources** (MDN, jQuery, etc.) at home to better understand what you’ll be getting into.
+
+- **Don’t be afraid to write code that you know you will have to remove later.** Create temporary elements (buttons, links, etc) that trigger events if real data is not available. For example, if you’re trying to figure out how to change some text when the game is over but you haven’t solved the win/lose game logic, you can create a button to simulate that until then.
