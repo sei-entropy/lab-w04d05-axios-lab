@@ -1,5 +1,4 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
-![Misk Logo](https://i.ibb.co/KmXhJbm/Webp-net-resizeimage-1.png)
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)![Misk Logo](https://i.ibb.co/KmXhJbm/Webp-net-resizeimage-1.png)
 
 # Mini-Project: Fun with Axios and APIs!
 
@@ -171,9 +170,11 @@ A promise method for when the Axios call fails...
 
 - [3 Ways to Fix Cors Errors](https://medium.com/@dtkatz/3-ways-to-fix-the-cors-error-and-how-access-control-allow-origin-works-d97d55946d9)
 
-- You may need to add [this chrome extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en) to bypass CORS errors. Be sure to turn it off once you are done working on the lab.
+- You may need to add [this chrome extension](https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino?hl=en) to bypass CORS errors. Be sure to turn it off once you are done working on the lab.
 
 - Append `https://cors-anywhere.herokuapp.com/` to the front of your api endpoint. For example: `https://cors-anywhere.herokuapp.com/https://dog.ceo.api.com/random/images`
+
+- To [Test CORS](https://webbrowsertools.com/test-cors/).
 
 <br>
 
