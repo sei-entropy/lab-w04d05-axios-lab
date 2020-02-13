@@ -3,6 +3,14 @@
 console.log('It work!');
 
 
+window.addEventListener('load',function(){
+   const loader = document.querySelector('.loader');
+//   when window loading will hid this div
+   loader.className+= " hidden";
+})
+
+
+
         const container = document.querySelector('#container');
         const inputTitle = document.querySelector('#title');
 
@@ -81,6 +89,7 @@ function funnyCat() {
     
       .then(res => {
         // WHEN SUCCESS
+        container.setAttribute('class','.loader');
     
         let arry = res.data.data;
 
