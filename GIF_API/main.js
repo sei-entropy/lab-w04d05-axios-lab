@@ -33,7 +33,7 @@ axios({
     let arry = res.data.data;
     
     header.style.display = 'block';
-    headerImg.src = 'imgs/Game-Of-Thrones.jpg';
+    headerImg.src = 'imgs/Game-Of-Thrones.png';
 
     if ( inputTitle.value !== '' ) {
         gitTitle( arry, inputTitle.value ) 
