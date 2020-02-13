@@ -31,7 +31,7 @@ axios({
     console.log(container);
     
     header.style.display = 'block';
-    headerImg.src = 'Game-Of-Thrones.jpg';
+    headerImg.src = 'imgs/Game-Of-Thrones.jpg';
 
     if ( inputTitle.value !== '' ) {
         gitTitle( arry, inputTitle.value ) 
@@ -94,7 +94,7 @@ function funnyCat() {
         
 
         header.style.display = 'block';
-        headerImg.src = 'cats.jpg';
+        headerImg.src = 'imgs/cats.jpg';
 
         if ( inputTitle.value !== '' ) {
             gitTitle( arry, inputTitle.value ) 
@@ -180,9 +180,8 @@ function funnyCat() {
 
 
 
-    /// remove 
-
+    /// remove all element in #container div
     const removeChilds = function (node) {
-        var last;
+        let last;
         while (last = node.lastChild) node.removeChild(last);
     };
