@@ -1,4 +1,5 @@
-///
+/// 
+
 
 console.log('It work!');
 
@@ -10,7 +11,9 @@ console.log('It work!');
         const header = document.querySelector('#header');
         const headerImg = document.querySelector('#header>img');
 
-// get data about Game Of Thrones
+
+
+/// Get all data about game Of Thrones
 function gameOfThrones() {
 
     removeChilds(container)
@@ -22,10 +25,13 @@ axios({
 
   .then(res => {
     // WHEN SUCCESS
+
     let arry = res.data.data;
+    console.log(arry);
+    console.log(container);
     
     header.style.display = 'block';
-    headerImg.src = 'imgs/Game-Of-Thrones.jpg';
+    headerImg.src = 'Game-Of-Thrones.jpg';
 
     if ( inputTitle.value !== '' ) {
         gitTitle( arry, inputTitle.value ) 
@@ -71,9 +77,12 @@ axios({
 
 
 }
-// get data about funny Cat
+
+/// Get all data about funny Cat
 function funnyCat() {
-    removeChilds(container)
+
+    removeChilds(container);
+
     axios({ 
         method: 'get', 
         url:`http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC`
@@ -83,9 +92,10 @@ function funnyCat() {
         // WHEN SUCCESS
     
         let arry = res.data.data;
+        console.log(arry);
 
         header.style.display = 'block';
-        headerImg.src = 'imgs/cats.jpg';
+        headerImg.src = 'cats.jpg';
 
         if ( inputTitle.value !== '' ) {
             gitTitle( arry, inputTitle.value ) 
@@ -125,6 +135,7 @@ function funnyCat() {
     }
 
 
+
       })
       .catch(err => {
         // WHEN FAILED
@@ -137,8 +148,8 @@ function funnyCat() {
 
 
 
-    /// if user search about title
-    const gitTitle = function (arry,title){
+/// If user search about one title
+    const gitTitle = function(arry,title) {
 
         for (let i = 0; i < arry.length; i++) {
                 
@@ -169,7 +180,9 @@ function funnyCat() {
     }
 
 
-    /// remove all element in #container div
+
+/// function to clear all element of  #container div
+
     const removeChilds = function (node) {
         let last;
         while (last = node.lastChild) node.removeChild(last);
