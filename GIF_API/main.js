@@ -12,11 +12,13 @@ window.addEventListener('load',function(){
 
 
         const container = document.querySelector('#container');
-        const inputTitle = document.querySelector('#title');
+        const inputTitle = document.querySelector('#title').value;
 
 
         const header = document.querySelector('#header');
         const headerImg = document.querySelector('#header>img');
+
+
 
 // get data about Game Of Thrones
 function gameOfThrones() {
@@ -33,43 +35,10 @@ axios({
     let arry = res.data.data;
     
     header.style.display = 'block';
-    headerImg.src = 'imgs/Game-Of-Thrones.png';
+    headerImg.src = 'imgs/Game-Of-Thrones.jpg';
 
-    if ( inputTitle.value !== '' ) {
-        gitTitle( arry, inputTitle.value ) 
-    } else {
+    displayData(inputTitle,arry);
 
-    for (let i = 0; i < arry.length; i++) {
-
-        let element = arry[i]; 
-
-        let div = document.createElement('div');
-        div.setAttribute('class','boxs') ; 
-
-        let p = document.createElement('p');
-        p.setAttribute('class','title') ; 
-        if (element.title === "") {
-            p.innerText='Do not have title !'
-        } else {
-            p.innerText=element.title;
-        }
-        
-
-        div.appendChild(p);
-
-        
-        let img_div = document.createElement('div');
-        img_div.setAttribute('class','imgDiv') ; 
-        img_div.style.backgroundImage= `url(${element.images.downsized_large.url})`;
-
-    
-        div.appendChild(img_div);
-
-
-        container.appendChild(div);
-
-    }  
-    }
 
   })
   .catch(err => {
@@ -79,6 +48,9 @@ axios({
 
 
 }
+
+
+
 // get data about funny Cat
 function funnyCat() {
     removeChilds(container)
@@ -89,49 +61,14 @@ function funnyCat() {
     
       .then(res => {
         // WHEN SUCCESS
-        container.setAttribute('class','.loader');
     
         let arry = res.data.data;
 
         header.style.display = 'block';
         headerImg.src = 'imgs/cats.jpg';
 
-        if ( inputTitle.value !== '' ) {
-            gitTitle( arry, inputTitle.value ) 
-        } else {
-    
-        for (let i = 0; i < arry.length; i++) {
-    
-            let element = arry[i]; 
-    
-            let div = document.createElement('div');
-            div.setAttribute('class','boxs') ; 
-    
-            let p = document.createElement('p');
-            p.setAttribute('class','title') ; 
-            if (element.title === "") {
-                p.innerText='Do not have title !'
-            } else {
-                p.innerText=element.title;
-            }
-            
-            
-            div.appendChild(p);
-    
-            
-            let img_div = document.createElement('div');
-            img_div.setAttribute('class','imgDiv') ; 
-            img_div.style.backgroundImage= `url(${element.images.downsized_large.url})`;
-            
-            
-            div.appendChild(img_div);
-    
-    
-            container.appendChild(div);
-    
-            
-        }
-    }
+        displayData(inputTitle,arry);
+        
 
 
       })
@@ -183,3 +120,47 @@ function funnyCat() {
         let last;
         while (last = node.lastChild) node.removeChild(last);
     };
+
+
+
+
+    // This function to display data in 
+    const displayData = function (inputTitle,arry) {
+        
+    if ( inputTitle !== '' ) {
+        gitTitle( arry, inputTitle ) 
+    } else {
+
+    for (let i = 0; i < arry.length; i++) {
+
+        let element = arry[i]; 
+
+        let div = document.createElement('div');
+        div.setAttribute('class','boxs') ; 
+
+        let p = document.createElement('p');
+        p.setAttribute('class','title') ; 
+        if (element.title === "") {
+            p.innerText='Do not have title !'
+        } else {
+            p.innerText=element.title;
+        }
+        
+
+        div.appendChild(p);
+
+        
+        let img_div = document.createElement('div');
+        img_div.setAttribute('class','imgDiv') ; 
+        img_div.style.backgroundImage= `url(${element.images.downsized_large.url})`;
+
+    
+        div.appendChild(img_div);
+
+
+        container.appendChild(div);
+
+    }  
+    }
+
+    }
