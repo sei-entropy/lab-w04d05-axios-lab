@@ -1,0 +1,57 @@
+
+#search{
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-around;
+    margin: 10px;
+}
+
+
+#header{
+    display: none;
+    width: auto;
+    height:20%;
+}
+
+
+#header>img{
+    width: 100%;
+    height: 50vh;
+}
+
+
+
+
+#container{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+    margin: 10px;
+
+    
+  }  
+
+
+.boxs{
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgba(199, 235, 238, 0.904);
+    text-align: center ;
+  
+}  
+
+
+.title{
+    color: rgba(112, 106, 107, 0.904);
+}
+  
+
+.imgDiv{
+    background-size: cover ;
+    width: 100px;
+    height: 100px;
+    box-shadow: 10px 10px 5px grey ;
+    margin: auto ;
+
+}
