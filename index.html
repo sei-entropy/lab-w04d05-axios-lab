@@ -12,46 +12,60 @@
 <body>
 
 
-
+<!-- create main div -->
     <div id="app">
+
+
+      <!-- create fprm for book search  -->
         <form id="book-search" @submit.prevent="search">
+          <!-- add label Tag for word -->
           <label>
             <span>Search for a book</span>
-            
+            <!-- add search mark -->
             <input type="text" v-model:trim="searchTerm" placeholder="⌕">
           </label>
-          
+          <!-- create button => search -->
           <button type="submit">Search</button>
         </form>
         
+        <!-- ------------------------------------------------------ -->
+
+<!-- Add List -->
         <ol class="search-results">
+
+          <!-- Create main List -->
           <li class="search-result" v-for="book in searchResults.items">
-            <img :src="'http://books.google.com/books/content?id=' + book.id + '&printsec=frontcover&img=1&zoom=1&source=gbs_api'" class="search-result--thumbnail">
+            <!-- Add image for books -->
+            <img :src="'http://books.google.com/books/content?id=' + book.id + '&printsec=frontcover&img=1&zoom=1&source=gbs_api'" 
+            class="search-result--thumbnail">
             
+            <!-- Creat main List for results -->
             <ul class="search-result--info">
+              <!-- add name for title name -->
               <li class="search-result--title">{{ book.volumeInfo.title }}</li>
-              
+              <!-- add name for authors name -->
               <li v-if="book.volumeInfo.authors" class="search-result--authors">
-                by {{ bookAuthors(book) }}
-              </li>
-              
+                by {{ bookAuthors(book) }}</li>
+              <!-- add name for published date -->
               <li v-if="book.volumeInfo.publishedDate" class="search-result--published">
-                <span>Published </span> {{ book.volumeInfo.publishedDate }}
-              </li>
+                <span>Published </span> {{ book.volumeInfo.publishedDate }}</li>
             </ul>
           </li>
         </ol>
+
+        <!-- ------------------------------------------------------ -->
+
     </div>
 
 
-  <!-- axios cdn -->
+    <!-- axios cdn -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- ajax cdn -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
     integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
     crossorigin="anonymous"></script>
     <!-- vue cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
     <!-- js -->
   <script src="main.js"></script>
 </body>

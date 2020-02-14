@@ -8,7 +8,7 @@ html  {
 
 body {
   margin: auto;
-  background-color: #faf7f6;
+  background-color: #ecf0eb;
   color: #805466;
 }
 
@@ -37,7 +37,7 @@ input {
 }
 
 button {
-  background: rebeccapurple;
+  background: rgb(38, 107, 44);
   position: relative;
   color: white;
   border: none;
@@ -46,7 +46,7 @@ button {
   font-size: .6rem;
   line-height: 2.8;
   text-transform: uppercase;
-  box-shadow: 0 .4rem 1rem -.4rem purple;
+  box-shadow: 0 .4rem 1rem -.4rem rgb(0, 128, 32);
 }
 
 .search-results {
