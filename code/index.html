@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>FourSquare</title>
+</head>
+
+<body>
+    <div class="selections">
+        <select name="league" id="leagues">
+            <option value="" disabled selected hidden>Choose League</option>
+            <option value="2021">English</option>
+            <option value="2014">Spanish</option>
+            <option value="2019">Italian</option>
+            <option value="2015">French</option>
+            <option value="2002">German</option>
+        </select>
+        <button onclick="getStanding()">show standing</button>
+        <button onclick="getTopScorers()">show scorers</button>
+    </div>
+
+    <div class="results">
+        <table id="results-table"></table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

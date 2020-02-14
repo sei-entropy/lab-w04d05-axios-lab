@@ -1,0 +1,25 @@
+.results {
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table {
+    width: 50%;
+}
+
+.selections{
+    margin: 20px auto;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
