@@ -1,0 +1,55 @@
+body {
+    background-image: url('https://images3.alphacoders.com/819/thumb-1920-81919.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+
+h4,
+p {
+    background-color: whitesmoke;
+}
+
+h4 {
+    font-size: 25px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.container {
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto auto auto auto;
+    margin-right: 400px;
+}
+
+.element {
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+#list {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    padding: 30px;
+    font-size: 50px;
+}
+
+#gsearch {
+    border-radius: 50px;
+    background-color: white;
+    border: black;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#button1 {
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
