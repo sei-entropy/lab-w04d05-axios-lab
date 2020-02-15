@@ -1,131 +1,162 @@
+let frnum;
+let lanum;
+let sennum;
+
+function setup(){
+
+   frnum = select("#fr");
+   lanum = select("#la");
+   sennum = select("#sen");
 
 
+}
 
+refresh = ()=>{
+  location.reload();
+}
 const box = document.querySelector('.box')
-
-function showCharacters() {
-    for (let i = 1; i <= 5; i++) {
-        let imgUrl = `https://pokeres.bastionbot.org/images/pokemon/${i}.png`;
-        let abilityurl= `https://pokeapi.co/api/v2/berry/${i}/`
-        let nameurl = `https://pokeapi.co/api/v2/pokemon/${i}`
-      const cardDiv = document.createElement('div');
-        cardDiv.classList.add('card');
-      const img = document.createElement('img');
-        img.classList.add('img');
-      const imgBx = document.createElement('div');
-        imgBx.classList.add('imgBx');
-      const details = document.createElement('div');
-        details.classList.add('details');
-      const name = document.createElement('h2');
-        name.classList = 'name5';
-      const ability = document.createElement('span');
-        ability.classList.add('call');
-
-  
-        axios.get(nameurl)
-  .then((res) => {
+ DisplaySinglePokemon = () => {
 
 
-    box.appendChild(cardDiv);
 
-    img.src= imgUrl;     
-    cardDiv.appendChild(imgBx)
-    imgBx.appendChild(img);
-
-    name.innerText = res.data.name;
-    cardDiv.appendChild(details);
-    details.appendChild(name);
-
-
-    return axios.get(abilityurl); 
-  })
-  .then((response) => {
-
-
-    ability.innerText = 'natural_gift_power : ' + response.data.smoothness;
-    name.appendChild(ability);
+    let imgUrl = `https://pokeres.bastionbot.org/images/pokemon/${Number(sennum.value())}.png`;
+    let abilityurl = `https://pokeapi.co/api/v2/berry/${Number(sennum.value())}/`
+    let nameurl = `https://pokeapi.co/api/v2/pokemon/${Number(sennum.value())}`
+    const cardDiv = document.createElement('div');
+      cardDiv.classList.add('card');
+    const img = document.createElement('img');
+      img.classList.add('img');
+    const imgBx = document.createElement('div');
+      imgBx.classList.add('imgBx');
+    const details = document.createElement('div');
+      details.classList.add('details');
+    const name = document.createElement('h2');
+      name.classList = 'name5';
+    const power = document.createElement('span');
+    power.classList.add('call');
+    const size = document.createElement('span');
+    size.classList.add('call');
+    const smoothness = document.createElement('span');
+    smoothness.classList.add('call2');
+    const dryness = document.createElement('span');
+    dryness.classList.add('call2');
+    const growth = document.createElement('span');
+    growth.classList.add('call2');
     
-  })
+    
 
-      // axios({
-      //   method: 'get',
-      //   url: {abilityurl: `https://pokeapi.co/api/v2/berry/${i}/`,nameurl:`https://pokeapi.co/api/v2/pokemon/${i}`}
-      // })
-      //   .then(res => {
 
-      //     const cardDiv = document.createElement('div');
-      //     cardDiv.classList.add('card');
-      //   const img = document.createElement('img');
-      //     img.classList.add('img');
-      //   const imgBx = document.createElement('div');
-      //     imgBx.classList.add('imgBx');
-      //   const details = document.createElement('div');
-      //     details.classList.add('details');
-      //   const name = document.createElement('h2');
-      //     name.classList = 'name5';
-      //     // const br = document.createElement('br');
-      //     // br.classList.add('br');
-      //     const ability = document.createElement('span');
-      //           ability.classList.add('call');
+    axios.get(nameurl)
+      .then((res) => {
 
-      //     box.appendChild(cardDiv);
 
-      //     img.src= imgUrl;     
-      //     cardDiv.appendChild(imgBx)
-      //     imgBx.appendChild(img);
+        box.appendChild(cardDiv);
 
-      //     name.innerText = res.data.name;
-      //     cardDiv.appendChild(details);
-      //     details.appendChild(name);
+        img.src = imgUrl;
+        cardDiv.appendChild(imgBx)
+        imgBx.appendChild(img);
 
-      //     ability.innerText = 'natural_gift_power : ' + nameurl.res.data.smoothness;
-      //     // name.appendChild(br);
-      //     name.appendChild(ability);
+        name.innerText = res.data.name;
+        cardDiv.appendChild(details);
+        details.appendChild(name);
 
-      //   })
 
-        .catch(err => {
-          console.log(err);
-        });
-    }
+        return axios.get(abilityurl);
+      })
+      .then((response) => {
+
+
+        power.innerText = 'Natural Gift Power : ' + response.data.natural_gift_power;
+        name.appendChild(power);
+
+        size.innerText = 'Size: ' + response.data.size;
+        power.appendChild(size);
+        smoothness.innerText = ' -Smoothness: ' + response.data.smoothness;
+        size.appendChild(smoothness);
+        dryness.innerText = ' -Dryness: ' + response.data.soil_dryness;
+        size.appendChild(dryness);
+        growth.innerText = ' -Growth Time: ' + response.data.growth_time;
+        size.appendChild(growth);
+        
+        
+        
+      })
+
+      .catch(err => {
+        console.log(err);
+      });
   }
-  // let i = 1;
-  // let imgUrl = `https://pokeres.bastionbot.org/images/pokemon/${i}.png`;
-  // const showCharacters = () => {
-  //   axios({
-  //       url: `https://pokeapi.co/api/v2/pokemon/${i}`,
-  //       method: 'get' 
-  //   })
 
-  //       .then(result => {
-  //           result.data.forEach( item => {
-  //             const cardDiv = document.createElement('div');
-  //               cardDiv.classList.add('card');
-  //             const img = document.createElement('img');
-  //               img.classList.add('img');
-  //             const imgBx = document.createElement('div');
-  //               imgBx.classList.add('imgBx');
-  //             const details = document.createElement('div');
-  //               details.classList.add('details');
-  //             const name = document.createElement('h2');
-  //               name.classList = 'card';
-
-
-  //               box.appendChild(cardDiv);
-
-  //               img.src= imgUrl;     
-  //               cardDiv.appendChild(imgBx)
-  //               imgBx.appendChild(img);
-
-  //               name.innerText = item.name;
-  //               cardDiv.appendChild(details);
-  //               details.appendChild(name);
+DisplayMultiplePokemon = () => {
 
 
 
-  //           })
-  //       })
-  //       .catch(err => {
-  //           console.log(err)
-  //       })
-  //   }
+  for (let i = Number(frnum.value()); i <= Number(lanum.value()) ; i++) {
+    let imgUrl = `https://pokeres.bastionbot.org/images/pokemon/${i}.png`;
+    let abilityurl = `https://pokeapi.co/api/v2/berry/${i}/`
+    let nameurl = `https://pokeapi.co/api/v2/pokemon/${i}`
+    const cardDiv = document.createElement('div');
+      cardDiv.classList.add('card');
+    const img = document.createElement('img');
+      img.classList.add('img');
+    const imgBx = document.createElement('div');
+      imgBx.classList.add('imgBx');
+    const details = document.createElement('div');
+      details.classList.add('details');
+    const name = document.createElement('h2');
+      name.classList = 'name5';
+    const power = document.createElement('span');
+    power.classList.add('call');
+    const size = document.createElement('span');
+    size.classList.add('call');
+    const smoothness = document.createElement('span');
+    smoothness.classList.add('call2');
+    const dryness = document.createElement('span');
+    dryness.classList.add('call2');
+    const growth = document.createElement('span');
+    growth.classList.add('call2');
+    
+    
+
+
+    axios.get(nameurl)
+      .then((res) => {
+
+
+        box.appendChild(cardDiv);
+
+        img.src = imgUrl;
+        cardDiv.appendChild(imgBx)
+        imgBx.appendChild(img);
+
+        name.innerText = res.data.name;
+        cardDiv.appendChild(details);
+        details.appendChild(name);
+
+
+        return axios.get(abilityurl);
+      })
+      .then((response) => {
+
+
+        power.innerText = 'Natural Gift Power : ' + response.data.natural_gift_power;
+        name.appendChild(power);
+
+        size.innerText = 'Size: ' + response.data.size;
+        power.appendChild(size);
+        smoothness.innerText = ' -Smoothness: ' + response.data.smoothness;
+        size.appendChild(smoothness);
+        dryness.innerText = ' -Dryness: ' + response.data.soil_dryness;
+        size.appendChild(dryness);
+        growth.innerText = ' -Growth Time: ' + response.data.growth_time;
+        size.appendChild(growth);
+        
+        
+        
+      })
+
+      .catch(err => {
+        console.log(err);
+      });
+  }
+}
