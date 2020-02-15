@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>country</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="styl">
+        <h3 class="titl"> Search for a country</h3>
+        <br>
+    <table id="tab" style="width:100%"></table>
+    <input type="name" id="place" placeholder="Enter country Name"> 
+    <button id="country" onclick="getcountry()">Search </button>
+    <!--  -->
+    <h3 class="titl"> OR Search by region: Africa, Americas, Asia, Europe, Oceania </h3>
+        <input type="name" id="reg" placeholder="Enter Region Name">
+        <button id="region" onclick="getRegion()">Search </button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
