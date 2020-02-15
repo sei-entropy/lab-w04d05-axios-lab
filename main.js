@@ -1,11 +1,11 @@
-//select the html tag
 //url for the loading https://mir-s3-cdn-cf.behance.net/project_modules/disp/9df4a732138533.567091182d1e6.gif
 
+//select the html tag
 const filmsName = $('.element').children('h4');
 const filmsid = $('.element').children('.all');
 const filmsDes = $('.element').children('.des');
 
-function getAnime() {
+function getfilms() {
 
     for (let i = 0; i < 7; i++) {
         axios({
