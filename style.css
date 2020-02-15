@@ -1,0 +1,148 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.content>div {
+  box-sizing: border-box;
+  margin: 0 10px 10px 0;
+  width: calc(1/3*100% - (1 - 1/3)*10px);
+  border-right: solid 2px black;
+  background-color: burlywood;
+
+}
+
+.content>div:nth-child(3n) {
+  margin-right: 0;
+}
+
+.content::after {
+  content: '';
+  flex: auto;
+}
+
+/*newatech*/
+.news-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.news-content>div {
+  box-sizing: border-box;
+  margin: 0 10px 10px 0;
+  width: calc(1/3*100% - (1 - 1/3)*10px);
+  border-right: solid 2px black;
+  background-color: khaki;
+
+}
+
+
+.news-content>div:nth-child(3n) {
+  margin-right: 0;
+}
+
+.news-content::after {
+  content: '';
+  flex: auto;
+}
+
+/*search*/
+.key-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.key-content>div {
+  box-sizing: border-box;
+  margin: 0 10px 10px 0;
+  width: calc(1/3*100% - (1 - 1/3)*10px);
+  border-right: solid 2px black;
+  background-color: bisque;
+
+}
+
+.key-content>div:nth-child(3n) {
+  margin-right: 0;
+}
+
+.key-content::after {
+  content: '';
+  flex: auto;
+}
+
+.divs {
+  display: flex;
+}
+
+.divs img {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.buttons {
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: whitesmoke;
+
+}
+
+.divsss {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bold-line-border {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+header {
+  text-align: center;
+}
+
+.nav ul {
+  display: inline-table;
+}
+
+.nav li {
+  text-decoration: none;
+  list-style: none;
+  display: inline;
+
+}
+
+.nav li a:link {
+  color: #000;
+
+}
+
+.nav li a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav li a:visited {
+  color: #000;
+  text-decoration: underline;
+}
+
+.nav li a:hover {
+  color: #000;
+  text-decoration: none;
+}
