@@ -1,0 +1,38 @@
+body {
+    background-image: url(https://i.pinimg.com/564x/80/c3/92/80c3927b6748ac7426e635d0ae361fbe.jpg);
+    color: rgb(0, 0, 0);
+    text-align: center;
+
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+img {
+    object-fit: cover;
+    padding: 10px;
+    border: 5px rgb(1, 1, 1) solid;
+    width: 600px;
+    height: 400px;
+
+}
+
+td {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    font-size: 30px;
+}
+
+button {
+    position: relative;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+}
