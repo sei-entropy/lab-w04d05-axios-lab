@@ -4,13 +4,13 @@ function getCatFacts() {
   for (let i = 0; i <= 4; i++) {
     axios({
         method: 'get',
-        url: 'https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=5'
+        url: 'https://cat-fact.herokuapp.com/facts/random?animal_type=cat'
       })
       .then(function (response) {
         console.log(response.data);
 
         const catFact = $(list[i].children[0]);
-        const catFactText = response.data[0].text;
+        const catFactText = response.data.text;
 
         catFact.text(catFactText);
       })
@@ -32,4 +32,13 @@ function getCatImage() {
     .catch(function (error) {
       console.log(error);
     });
+}
+
+getCatImage();
+
+
+function addFacts() {
+  console.log(document.getElementById('userInput').value);
+  let newFact =document.getElementById('userInput').value
+  document.querySelector('#name5').innerText = newFact
 }
